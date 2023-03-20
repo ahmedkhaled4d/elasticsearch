@@ -15,3 +15,19 @@
             }
         }
     }
+
+### Running a match query against multiple fields
+
+    GET Enter_the_name_of_the_index_here/_search
+    {
+        "query": {
+            "multi_match": {
+            "query": "Enter search terms here",
+            "fields": [
+                "List the field you want to search over",
+                "List the field you want to search over",
+                "List the field you want to search over"
+            ]
+            }
+        }
+    }
